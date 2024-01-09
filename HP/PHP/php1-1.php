@@ -14,13 +14,5 @@
   echo "暑中お見舞い<br>
   申し上げます"
   ?>
-  <?php
-  $a=array('日曜日','月曜日','火曜日','水曜日','木曜日','金曜日','土曜日')
-  echo '<ul>';
-foreach ($weekdays as $day) {
-    echo '<li>' . $day . '</li>';
-}
-echo '</ul>';
-  ?>
 </body>
 </html>
