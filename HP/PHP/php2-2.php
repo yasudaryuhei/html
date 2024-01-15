@@ -24,14 +24,17 @@
     echo"<tr>";
     echo"<td>鉛筆</td>";
     echo"<td>" . $products["鉛筆"]["価格"] . "</td>";
+    echo"<td>" . $products["鉛筆"]["税込価格"] . "</td>";
     echo"</tr>";
     echo"<tr>";
-    echo"$products[2]";
-    echo"$products[3]";
+    echo"<td>消しゴム</td>";
+    echo"<td>" . $products["消しゴム"]["価格"] . "</td>";
+    echo"<td>" . $products["消しゴム"]["税込価格"] . "</td>";
     echo"</tr>";
     echo"<tr>";
-    echo"$products[4]";
-    echo"$products[5]";
+    echo"<td>定規</td>";
+    echo"<td>" . $products["定規"]["価格"] . "</td>";
+    echo"<td>" . $products["定規"]["税込価格"] . "</td>";
     echo"</tr>";
     echo"</table>";
 // 表の開始タグ
