@@ -13,10 +13,14 @@ for ($i = 1; $i <= 9; $i++) {
     // 内側のループ（列）
     for ($j = 1; $j <= 9; $j++) {
         // 九九の計算と結果を表示
-        echo $i . " * " . $j . " = " . $i * $j . "\t";
+        echo "<table>";
+        echo "<tr>";
+        echo "<td>". $i . " × " . $j . " = " . $i * $j .  " </td>";
+        echo "</tr>";
+        echo "</table>";
     }
     // 行の終わり
-    echo "\n";
+    echo "<br>";
 }
 ?>
 </body>
