@@ -18,11 +18,9 @@
       printf('%s<br>', $this -> text);
     }
   }
+  $posts[0] = new post("佐藤 一郎");
+  $posts[1] = new post("佐藤 一郎","25");
   $posts[0] = new post("佐藤 一郎","25");
-  $posts[0] = new post("佐藤 一郎","25");
-  $posts[0] = new post("佐藤 一郎","25");
-
-  function All
 
   $posts[0]->show();
   $posts[1]->show();
