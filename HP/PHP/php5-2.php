@@ -17,13 +17,13 @@ $count = count($week);
 // インデックスを初期化
 $i = 0;
 
-echo "<ul>\n";
+echo "<ul>";
 // 配列の各要素を箇条書きに表示
 while ($i < $count) {
-    echo "<li>" . $week[$i] . "</li>\n";
+    echo "<li>" . $week[$i] . "</li>";
     $i++;
 }
-echo "</ul>\n";
+echo "</ul>";
 ?>
 </body>
 </html>

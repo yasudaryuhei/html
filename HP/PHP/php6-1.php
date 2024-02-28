@@ -15,7 +15,7 @@ function showString($num, $str) {
 }
 
 // 3回表示させる例
-showString(3, "気合いだ！");
+showString(5, "気合いだよ！");
 ?>
 </body>
 </html>

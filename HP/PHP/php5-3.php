@@ -16,8 +16,8 @@ $products = array(
 );
 
 // 表の開始タグ
-echo "<table border='1'>\n";
-echo "<tr><th>商品名</th><th>価格</th><th>税込価格</th></tr>\n";
+echo "<table>";
+echo "<tr><th>商品名</th><th>価格</th><th>税込価格</th></tr>";
 
 // 連想配列の内容を表に表示
 foreach ($products as $product => $prices) {

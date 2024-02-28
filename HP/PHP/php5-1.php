@@ -7,21 +7,23 @@
 </head>
 <body>
   <h1>Hello PHP World</h1>
+  <table>
   <?php
-// 外側のループ（行）
+// 外側のループ（行
 for ($i = 1; $i <= 9; $i++) {
     // 内側のループ（列）
+    echo "<tr>";
     for ($j = 1; $j <= 9; $j++) {
         // 九九の計算と結果を表示
-        echo "<table>";
-        echo "<tr>";
+        
         echo "<td>". $i . " × " . $j . " = " . $i * $j .  " </td>";
-        echo "</tr>";
-        echo "</table>";
+        
     }
+    echo "</tr>";
     // 行の終わり
-    echo "<br>";
+    
 }
 ?>
+</table>
 </body>
 </html>
