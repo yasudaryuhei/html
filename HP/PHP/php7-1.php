@@ -38,15 +38,24 @@ class Staff {
 }
 
 // 実行例
-$staff1 = new Staff("佐藤一郎", 25, "男性");
-$staff2 = new Staff("山田花子", 25, "女性");
-$staff3 = new Staff("鈴木次郎", 27, "男性");
+$staffMembers = [
+  new Staff("佐藤一郎", 25, "男性"),
+  new Staff("山田花子", 25, "女性"),
+  new Staff("鈴木次郎", 27, "男性")
+];
 
-$staff1->show();
-echo "<br>";
-$staff2->show();
-echo "<br>";
-$staff3->show();
+foreach ($staffMembers as $staff) {
+  $staff->show();
+  echo "<br>";
+}
+// $staff[1] = new Staff("佐藤一郎", 25, "男性");
+// $staff[2] = new Staff("山田花子", 25, "女性");
+// $staff[3] = new Staff("鈴木次郎", 27, "男性");
+
+// foreach ($staffs as $staff){
+//   $staff->show();
+//   echo "<br>";
+// }
 ?>
 </body>
 </html>
