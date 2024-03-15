@@ -9,11 +9,17 @@
   <h1>Hello PHP World</h1>
   <?php
 function max_number($n1, $n2) {
-    return ($n1 > $n2) ? $n1 : $n2;
+    // return ($n1 > $n2) ? $n1 : $n2;
+    if ($n1 > $n2) {
+    return  $n1;
+    }
+    else {
+    return  $n2;
+    };
 }
 
 // $aと$bの値
-$a = 9;
+$a = 29;
 $b = 21;
 
 // 関数の呼び出しと最大値の表示

@@ -14,23 +14,24 @@ class Staff {
     private $age;
     private $sex;
     private $id;
-    private $jikyu; // 時給
-
-    // コンストラクタ
-    public function __construct($name, $age, $sex, $jikyu = null) {
-        $this->name = $name;
-        $this->age = $age;
-        $this->sex = $sex;
-        $this->jikyu = $jikyu;
-        $this->number();
-    }
+    static $idCounter = 1;
+    
+      // コンストラクタ
+      public function __construct($name, $age, $sex) {
+          $this->name = $name;
+          $this->age = $age;
+          $this->sex = $sex;
+          $this->number();
+      }
+  
 
     // メソッド: number
     public function number() {
         // S0001番から順に割り振る処理
-        static $idCounter = 1;
-        $this->id = 'S' . str_pad($idCounter++, 4, '0', STR_PAD_LEFT);
+        // $this->id = 'S' . str_pad($idCounter++, 4, '0', STR_PAD_LEFT);
+        $this->id = self::$idCounter++;
     }
+
 
     // メソッド: show
     public function show() {
@@ -42,13 +43,14 @@ class Staff {
 
         echo "\n";  // 改行
     }
+    
 }
 
 // 実行例
 $staff1 = new Staff("佐藤一郎", 25, "男性");
 $staff2 = new Staff("山田花子", 25, "女性");
 $staff3 = new Staff("鈴木次郎", 27, "男性");
-$staff4 = new Staff("中村友子", 24, "女性", 900); // 時給あり
+$staff4 = new Staffpart("中村友子", 24, "女性", 900); // 時給あり
 $staff5 = new Staff("中村三郎", 27, "男性");
 
 $staff1->show();

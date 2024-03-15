@@ -9,12 +9,13 @@
   <h1>Hello PHP World</h1>
   <?php
 class Staff {
-    // プロパティ
-    private $name;
-    private $age;
-    private $sex;
-    private $id;
-
+  // プロパティ
+  private $name;
+  private $age;
+  private $sex;
+  private $id;
+  static $idCounter = 1;
+  
     // コンストラクタ
     public function __construct($name, $age, $sex) {
         $this->name = $name;
@@ -26,13 +27,13 @@ class Staff {
     // メソッド: number
     public function number() {
         // S0001番から順に割り振る処理
-        static $idCounter = 1;
-        $this->id = 'S' . str_pad($idCounter++, 4, '0', STR_PAD_LEFT);
+        // $this->id = 'S' . str_pad($idCounter++, 4, '0', STR_PAD_LEFT);
+        $this->id = self::$idCounter++;
     }
 
     // メソッド: show
     public function show() {
-        printf("%s, %d歳, %s性\n", $this->name, $this->age, $this->sex);
+        printf("(S%04s), %s, %d歳, %s", $this->id, $this->name, $this->age, $this->sex);
     }
 }
 

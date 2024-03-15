@@ -21,11 +21,11 @@ echo "<tr><th>商品名</th><th>価格</th><th>税込価格</th></tr>";
 
 // 連想配列の内容を表に表示
 foreach ($products as $product => $prices) {
-    echo "<tr><td>" . $product . "</td><td>" . $prices["価格"] . "</td><td>" . $prices["税込価格"] . "</td></tr>\n";
+    echo "<tr><td>" . $product . "</td><td>" . $prices["価格"] . "</td><td>" . $prices["税込価格"] . "</td></tr>";
 }
 
 // 表の終了タグ
-echo "</table>\n";
+echo "</table>";
 ?>
 </body>
 </html>
