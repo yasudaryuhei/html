@@ -40,7 +40,6 @@ class Staff {
         if ($this->jikyu !== null) {
             echo ", 時給: " . $this->jikyu . "円";
         }
-
         echo "\n";  // 改行
     }
     

@@ -21,7 +21,11 @@ class Staff {
         $this->name = $name;
         $this->age = $age;
         $this->sex = $sex;
+<<<<<<< HEAD
+        // $this->number();
+=======
         $this->number();
+>>>>>>> c37fb19716b94c127c31ff149a16361945e98ffe
     }
 
     // メソッド: number
@@ -38,6 +42,18 @@ class Staff {
 }
 
 // 実行例
+<<<<<<< HEAD
+$staffs[1] = new Staff("佐藤一郎", 25, "男性");
+$staffs[2] = new Staff("山田花子", 25, "女性");
+$staffs[3] = new Staff("鈴木次郎", 27, "男性");
+
+// $staff1->show();
+// echo "<br>";
+// $staff2->show();
+// echo "<br>";
+// $staff3->show();
+4
+=======
 $staffMembers = [
   new Staff("佐藤一郎", 25, "男性"),
   new Staff("山田花子", 25, "女性"),
@@ -56,6 +72,7 @@ foreach ($staffMembers as $staff) {
 //   $staff->show();
 //   echo "<br>";
 // }
+>>>>>>> c37fb19716b94c127c31ff149a16361945e98ffe
 ?>
 </body>
 </html>
