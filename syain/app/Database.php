@@ -35,4 +35,47 @@ class Database
           exit; 
         }
     }
+    function getsyain($id)
+    {
+        try{
+          $this->connect();
+          $stmt = $this->pdo->prepare("SELECT id, name FROM syain ORDER BY id = ? ;");
+          $stmt->bindParm(1, $id, PDO::PARAM_INT);
+          $member = $stmt->execute();
+          if ($member){
+            $members = $stmt->fetchALL();
+            if (count($member) == 0) {
+              return null;
+            }
+            return $member[0];
+          }
+          return null;
+        } catch (PODException $e) {
+          echo   $e->getMessage() . '<br>';
+          exit; 
+        }
+    }
+    function idexist($id)
+    {
+      if ($this->getsyain($id) != null){
+        return true;
+      }
+      return false;
+    }
+    function createsyain($id, $name, $age, $work)
+    {
+      try {
+        $stmt = $this->pdo->prepare("INSERT INTO syain VALUES(?,?,?,?);");
+        $stmt->bindParm();
+        $stmt->bindParm();
+        $stmt->bindParm();
+        $stmt->bindParm();
+        $result = $stmt->execute();
+        return true;
+      } catch (PDOException $e){
+      echo $e->getMessage() . '<br>';
+      exit;
+    }
+    return false;
+  }
 }
